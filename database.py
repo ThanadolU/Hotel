@@ -114,9 +114,14 @@ class Database:
         :return: list of dict ---> ex. [{'room': '2A', 'name': 'Dol', 'money': '1700'}]
         :rtype: list
         """
-        customer_data = []
-        with open("Customer.csv", "r") as f:
-            rows = csv.DictReader(f)
-            for r in rows:
-                customer_data.append(r)
+        try:
+            customer_data = []
+            with open("Customer.csv", "r") as f:
+                rows = csv.DictReader(f)
+                for r in rows:
+                    customer_data.append(r)
+        except FileNotFoundError:
+            with open("Customer.csv", "w") as f:
+                writer = csv.DictWriter(f, fieldnames=['room', 'name', 'money'])
+                writer.writeheader()
         return customer_data
