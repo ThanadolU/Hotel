@@ -2,7 +2,6 @@
 This program is a part of the 01219114 Computer Programming 1 course. It's about room reservation. You can choose any room you want.
 
 ## Overview and features
------------------------------------------------------------------------------
 The main program will ask user that you want to check in or check out, Then it 
 will show you all room (including the room that reserved) in the hotel on the graphic.
 
@@ -12,12 +11,10 @@ will show you all room (including the room that reserved) in the hotel on the gr
 * Quit program.
 
 ## The program's requirement
------------------------------------------------------------------------------
 * [turtle](https://docs.python.org/3/library/turtle.html), which is used for the graphical part.
 * [rich](https://pypi.org/project/rich/), which is used for decoration.
 
 ## About design
------------------------------------------------------------------------------
 * `Database` : This class used for read and write file contain with room, name and money.
 * `Hotel` : This class used for create room, check in and check out.
 * `Room` : This class used for represent room and name.
@@ -27,7 +24,6 @@ And here is class diagram of the program.
 ![class_diagram](class_diagram.png)
 
 ## Code structure
------------------------------------------------------------------------------
 This program consists of five python files and another one csv file for collect data.
 * [database.py](database.py) : This file contains the `Database` class.
 * [hotel.py](hotel.py) : This file contains the `Hotel` class.
